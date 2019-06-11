@@ -1,18 +1,453 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="horizontal"
     android:layout_height="match_parent"
+    android:background="@color/backgroundPrimary"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/menu_sidebar"
+        android:layout_width="65dp"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/white"
+        android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+        <RelativeLayout
+            android:id="@+id/list"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="40dp"
+                android:layout_margin="7dp"
+                android:src="@drawable/list_icon" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/smallicon"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/list"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_smallicon"
+                android:layout_marginTop="8dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/smallicon_icon"/>
+
+            <TextView
+                android:id="@+id/txt_smallicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_smallicon"
+                android:layout_centerHorizontal="true"
+                android:text="Small Icon"
+                android:textSize="12dp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/receipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/smallicon"
+            >
+
+            <ImageView
+                android:id="@+id/img_receipt"
+                android:layout_width="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/receipt"
+                />
+
+            <TextView
+                android:id="@+id/txt_receipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_receipt"
+                android:layout_centerHorizontal="true"
+                android:text="Receipt"
+                android:textSize="12dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dinein"
+            android:layout_below="@+id/receipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_dinein"
+                android:layout_width="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/dinein2_icon"/>
+
+            <TextView
+                android:id="@+id/txt_dinein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_dinein"
+                android:layout_centerHorizontal="true"
+                android:text="Dine In"
+                android:textSize="12dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dinein"
+            >
+
+            <ImageView
+                android:id="@+id/img_table"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/table"/>
+
+            <TextView
+                android:id="@+id/txt_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_table"
+                android:layout_centerHorizontal="true"
+                android:text="Table"
+                android:textSize="12dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu_tengah"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/menu_sidebar"
+        android:layout_toLeftOf="@+id/menu"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:id="@+id/mid_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <Spinner
+                android:id="@+id/list_categori"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/notification"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="7dp"
+                android:layout_toLeftOf="@+id/search"
+                android:src="@drawable/notification_icon"/>
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="7dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/search_icon"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/all_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/mid_header">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/list_from_categori"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </ListView>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="320dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/white"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/wadah_menu1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/cashier"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/img_cashier"
+                    android:background="@drawable/cashier_icon"
+                    android:layout_width="40dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/txt_cashier"
+                    android:layout_toRightOf="@+id/img_cashier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Cashier"/>
+
+                <TextView
+                    android:id="@+id/txt_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_cashier"
+                    android:layout_toRightOf="@+id/img_cashier"
+                    android:textSize="10dp"
+                    android:text="WH : 4h 27m"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/garis1"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_margin="6dp"
+                android:layout_toLeftOf="@+id/scan"
+                android:background="@android:color/darker_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/garis2"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/img_qrcode"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/qrcode_icon"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/txt_qrcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_qrcode"
+                    android:text="Scan"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/garis2"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_margin="6dp"
+                android:layout_toLeftOf="@+id/customer"
+                android:background="@android:color/darker_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/img_customer"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/customer_icon"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/txt_customer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_customer"
+                    android:text="Customer"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wadah_tajuk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wadah_menu1"
+            android:background="@color/backgroundPrimary">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/trash_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Order(6)"
+                android:textStyle="bold"
+                android:textSize="25dp"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_list"
+            android:layout_below="@+id/wadah_tajuk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/wadah_buttonbwh"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:id="@+id/btn_order"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true">
+
+                <TextView
+                    android:id="@+id/txt_btnorder"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Send Order To Kitchen"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@android:color/white"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_btnorder"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/chef_icon"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/backgroundPrimary"
+                android:layout_centerInParent="true"/>
+
+            <RelativeLayout
+                android:id="@+id/btn_charge"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/txtcharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Charge"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="18dp"
+                    android:textColor="@android:color/white"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtcharge"
+                    android:layout_centerHorizontal="true"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_charge"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/coin_icon" />
+
+                    <TextView
+                        android:id="@+id/txt_coin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="217.5k"
+                        android:textColor="@android:color/white"
+                        android:layout_toRightOf="@+id/img_charge"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

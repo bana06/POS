@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:id="@+id/menu_sidebar"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_alignParentLeft="true"
         android:background="@android:color/white"
         android:layout_height="match_parent">
@@ -40,7 +40,7 @@
 
             <ImageView
                 android:id="@+id/img_smallicon"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_centerHorizontal="true"
@@ -55,8 +55,17 @@
                 android:text="Small Icon"
                 android:textSize="12dp"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_below="@+id/txt_smallicon"
+                android:background="@color/backgroundPrimary"/>
 
         </RelativeLayout>
+
 
         <RelativeLayout
             android:id="@+id/receipt"
@@ -83,6 +92,15 @@
                 android:text="Receipt"
                 android:textSize="12dp"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_below="@+id/txt_receipt"
+                android:background="@color/backgroundPrimary"/>
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -107,6 +125,15 @@
                 android:layout_centerHorizontal="true"
                 android:text="Dine In"
                 android:textSize="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_below="@+id/txt_dinein"
+                android:background="@color/backgroundPrimary"/>
 
         </RelativeLayout>
 
@@ -133,6 +160,15 @@
                 android:layout_centerHorizontal="true"
                 android:text="Table"
                 android:textSize="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_below="@+id/txt_table"
+                android:background="@color/backgroundPrimary"/>
 
         </RelativeLayout>
 
@@ -254,7 +290,7 @@
                 android:layout_height="45dp"
                 android:layout_margin="6dp"
                 android:layout_toLeftOf="@+id/scan"
-                android:background="@android:color/darker_gray"/>
+                android:background="@color/backgroundPrimary"/>
 
             <RelativeLayout
                 android:id="@+id/scan"
@@ -288,7 +324,7 @@
                 android:layout_height="45dp"
                 android:layout_margin="6dp"
                 android:layout_toLeftOf="@+id/customer"
-                android:background="@android:color/darker_gray"/>
+                android:background="@color/backgroundPrimary"/>
 
             <RelativeLayout
                 android:id="@+id/customer"

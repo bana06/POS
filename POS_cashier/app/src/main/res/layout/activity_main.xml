@@ -336,7 +336,8 @@
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp">
 
-                <ImageView
+                <ImageButton
+                    android:onClick="delete"
                     android:id="@+id/img_customer"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -363,6 +364,7 @@
             android:background="@color/backgroundPrimary">
 
             <ImageView
+                android:onClick="delete"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_margin="10dp"
@@ -409,6 +411,7 @@
                 android:layout_alignParentLeft="true">
 
                 <TextView
+                    android:onClick="Showorder"
                     android:id="@+id/txt_btnorder"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"

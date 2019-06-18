@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 
     //utk relasi costumer java dan xml
     TextView btn_exit;
-    LinearLayout btn_add_customer;
+    RelativeLayout btn_add_customer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,7 +106,7 @@ public class MainActivity extends Activity {
     public void showCustomer(){
         dialogMain.setContentView(R.layout.activity_costumer);
 
-        btn_add_customer = (LinearLayout) findViewById(R.id.btn_add_customer);
+        btn_add_customer = (RelativeLayout) findViewById(R.id.btn_add_costumer);
         btn_exit = (TextView) findViewById(R.id.btn_exit);
 
 //        btn_add_customer.setOnClickListener(new View.OnClickListener() {

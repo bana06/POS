@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">POS_cashier</string>
+<<<<<<< Updated upstream
     <string name="search">Search</string>
+=======
+    <string name="slide1">Slide ke 1</string>
+    <string name="slide2">Slide ke 2</string>
+    <string name="slide3">Slide ke 3</string>
+    <string-array name="list">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+>>>>>>> Stashed changes
 </resources>

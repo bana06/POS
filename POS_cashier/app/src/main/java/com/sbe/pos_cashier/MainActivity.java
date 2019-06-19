@@ -2,55 +2,20 @@ package com.sbe.pos_cashier;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.SearchView;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 
 public class MainActivity extends Activity {
-
-    //integrasi java dan xml
-    ListView list_from_categori;
-    ArrayAdapter<String>adapter;
-    Dialog dialogMain;
-    RelativeLayout customer;
-
-    //utk relasi costumer java dan xml
-    TextView btn_exit;
-    RelativeLayout btn_add_customer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        list_from_categori = (ListView)findViewById(R.id.list_from_categori);
-
-        //utk add customer
-        dialogMain = new Dialog(MainActivity.this);
-        customer = (RelativeLayout) findViewById(R.id.customer);
-
-        customer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showCustomer();
-            }
-        });
     }
 
     private void ShowDelete(){

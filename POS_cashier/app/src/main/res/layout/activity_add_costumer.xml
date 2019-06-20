@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="350dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:orientation="vertical">
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".AddCostumer">
 
     <LinearLayout
         android:id="@+id/linear1"
@@ -28,6 +31,7 @@
             android:layout_marginLeft="10dp"
             android:textColor="@android:color/black"
             android:textSize="30dp" />
+
         <TextView
             android:id="@+id/save"
             android:layout_width="wrap_content"
@@ -37,6 +41,7 @@
             android:textColor="@android:color/holo_green_light"
             android:layout_gravity="center"
             android:layout_marginLeft="50dp"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -46,12 +51,14 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/imagecostumer"
             android:layout_gravity="center"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:background="@drawable/cashier_icon"/>
+
         <TextView
             android:id="@+id/txtimagecostumer"
             android:layout_width="wrap_content"
@@ -60,95 +67,120 @@
             android:textSize="20dp"
             android:textColor="@android:color/holo_green_light"
             android:text="My Photo"/>
+
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
     <LinearLayout
         android:id="@+id/linear3"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:paddingTop="10dp"
             android:id="@+id/layout_kartuid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="40dp"
                 android:background="@drawable/id_card"
                 />
-            <EditText
+
+            <TextView
                 android:id="@+id/kartu_id"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
         </LinearLayout>
+
         <LinearLayout
             android:paddingTop="10dp"
             android:id="@+id/layout_nama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/image_nama"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/user"/>
+
             <EditText
                 android:hint="Nama"
                 android:id="@+id/nama"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
         </LinearLayout>
+
         <LinearLayout
             android:paddingTop="10dp"
             android:id="@+id/layout_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/image_email"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/email"/>
+
             <EditText
                 android:id="@+id/email"
                 android:hint="Email"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
         </LinearLayout>
+
         <LinearLayout
             android:paddingTop="10dp"
             android:id="@+id/layout_mobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/image_mobile"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/mobile"/>
+
             <EditText
                 android:id="@+id/mobile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Mobile"/>
+
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/layout_notes"
             android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/image_notes"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/notes"/>
+
             <EditText
                 android:id="@+id/notes"
                 android:hint="Notes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
         </LinearLayout>
+
     </LinearLayout>
+
     </ScrollView>
+
 </LinearLayout>

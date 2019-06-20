@@ -21,6 +21,11 @@
             android:layout_width="match_parent"
             android:layout_height="54dp">
 
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/list_icon"
+                android:layout_centerInParent="true"/>
 
         </RelativeLayout>
 
@@ -28,6 +33,7 @@
 
         <RelativeLayout
             android:id="@+id/smallicon"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_below="@+id/list"
             android:layout_height="wrap_content">
@@ -197,13 +203,15 @@
                 android:layout_toLeftOf="@+id/search"
                 android:src="@drawable/notification_icon"/>
 
-            <ImageView
+            <SearchView
                 android:id="@+id/search"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_margin="7dp"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/search_icon"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+
+            </SearchView>
 
         </RelativeLayout>
 
@@ -395,7 +403,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryLight">
 
             <RelativeLayout
                 android:id="@+id/btn_order"

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    tools:context=".PopupDinein">
+
+    <TextView
+        android:id="@+id/tajuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="Order Type"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/garis"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tajuk"
+        android:background="@color/garis"/>
+
+    <RelativeLayout
+        android:id="@+id/opsi_dinein"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_below="@+id/garis"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/ic_dinein"
+            android:layout_width="30dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="-20dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/dinein2_icon"/>
+
+        <TextView
+            android:id="@+id/txt_dinein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dine In"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-15dp"
+            android:layout_below="@+id/ic_dinein"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/garis1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/opsi_dinein"
+        android:background="@color/garis"/>
+
+    <RelativeLayout
+        android:id="@+id/opsi_takeaway"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/garis1"
+        android:padding="8dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/ic_takeaway"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="-10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/takeaway_icon"/>
+
+        <TextView
+            android:id="@+id/txt_takeaway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take Away"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-10dp"
+            android:layout_below="@+id/ic_takeaway"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/garis2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/opsi_takeaway"
+        android:background="@color/garis"/>
+
+    <RelativeLayout
+        android:id="@+id/opsi_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/garis2"
+        android:padding="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/ic_delivery"
+            android:layout_width="45dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="-25dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/delivery_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-20dp"
+            android:layout_below="@+id/ic_delivery"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/garis3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/opsi_delivery"
+        android:background="@color/garis"/>
+
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CANCEL"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/garis3"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"/>>
+
+</RelativeLayout>

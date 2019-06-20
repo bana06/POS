@@ -1,21 +1,39 @@
 package com.sbe.pos_cashier;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
+import android.support.v7.app.AlertDialog;
+import android.view.View;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends Activity {
+
+    RelativeLayout customer, dinein;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //dinein
+        dinein = (RelativeLayout) findViewById(R.id.dinein);
+        dinein.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PopupDinein.class));
+            }
+        });
+
+        customer = (RelativeLayout) findViewById(R.id.customer);
+        customer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CostumerActivity.class));
+            }
+        });
     }
 
     private void ShowDelete(){
@@ -68,27 +86,4 @@ public class MainActivity extends Activity {
         Showorder();
     }
 
-    public void showCustomer(){
-        dialogMain.setContentView(R.layout.activity_costumer);
-
-        btn_add_customer = (RelativeLayout) findViewById(R.id.btn_add_costumer);
-        btn_exit = (TextView) findViewById(R.id.btn_exit);
-
-//        btn_add_customer.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(MainActivity.this, "Ini button add customer", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-//        btn_exit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                dialogMain.dismiss();
-//            }
-//        });
-
-        dialogMain.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialogMain.show();
-    }
 }

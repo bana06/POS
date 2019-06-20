@@ -6,11 +6,19 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:screenOrientation="landscape"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CostumerActivity"></activity>
+        <activity android:name=".PopupDinein"
+            android:theme="@style/AppTheme.Costumetheme"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".AddCostumer"
+            android:theme="@style/AppTheme.PopMe"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".CostumerActivity"
+            android:theme="@style/AppTheme.PopMe"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape">

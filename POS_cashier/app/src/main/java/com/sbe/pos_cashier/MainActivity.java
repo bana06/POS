@@ -8,9 +8,11 @@ import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.sbe.pos_cashier.Charge.Charge;
+
 public class MainActivity extends Activity {
 
-    RelativeLayout customer, dinein;
+    RelativeLayout customer, dinein, btn_charge;
 
 
     @Override
@@ -27,11 +29,21 @@ public class MainActivity extends Activity {
             }
         });
 
+        //costumer
         customer = (RelativeLayout) findViewById(R.id.customer);
         customer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, CostumerActivity.class));
+            }
+        });
+
+        //charge
+        btn_charge = (RelativeLayout) findViewById(R.id.btn_charge);
+        btn_charge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Charge.class));
             }
         });
     }

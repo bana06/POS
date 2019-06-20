@@ -10,7 +10,8 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Charge.ChargeCash"></activity>
+        <activity android:name=".popup_delete"></activity>
+        <activity android:name=".Charge.ChargeCash" />
         <activity android:name=".Charge.Charge" />
         <activity
             android:name=".PopupDinein"

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:background="@android:color/white"
+    android:layout_gravity="center"
+    android:layout_height="200dp"
+    tools:context=".popup_delete">
+
+    <RelativeLayout
+        android:id="@+id/wadahtext"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Are you sure want to delete this order?"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@android:color/black"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wadah_yes"
+        android:layout_below="@+id/wadahtext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/txt_yes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Yes"
+            android:textSize="20dp"
+            android:textColor="@android:color/holo_green_light"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/wadah_cancel"
+        android:layout_below="@+id/wadah_yes"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textSize="20dp"
+            android:textColor="@android:color/holo_green_light"/>
+    </RelativeLayout>
+</RelativeLayout>

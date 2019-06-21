@@ -9,13 +9,13 @@
     tools:context=".popup_delete">
 
     <RelativeLayout
-        android:id="@+id/wadahtext"
+        android:id="@+id/wadahtext2"
         android:layout_width="match_parent"
         android:layout_height="100dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="Are you sure want to delete this order?"
+            android:text="Are you sure want to send this order to kitchen?"
             android:textSize="25dp"
             android:textAlignment="center"
             android:gravity="center"
@@ -23,19 +23,19 @@
     </RelativeLayout>
 
     <TextView
-        android:layout_below="@+id/wadahtext"
-        android:id="@+id/garis8"
+        android:layout_below="@+id/wadahtext2"
+        android:id="@+id/garis6"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
 
     <RelativeLayout
-        android:id="@+id/wadah_yes"
-        android:layout_below="@+id/garis8"
+        android:id="@+id/wadah_yes1"
+        android:layout_below="@+id/garis6"
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <TextView
-            android:id="@+id/txt_yes"
+            android:id="@+id/txt_yes1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Yes"
@@ -45,19 +45,19 @@
     </RelativeLayout>
 
     <TextView
-        android:layout_below="@+id/wadah_yes"
-        android:id="@+id/garis9"
+        android:layout_below="@+id/wadah_yes1"
+        android:id="@+id/garis7"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
 
     <RelativeLayout
-        android:id="@+id/wadah_cancel"
-        android:layout_below="@+id/garis9"
+        android:id="@+id/wadah_cancel1"
+        android:layout_below="@+id/garis7"
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <TextView
-            android:id="@+id/txt_cancel"
+            android:id="@+id/txt_cancel1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
